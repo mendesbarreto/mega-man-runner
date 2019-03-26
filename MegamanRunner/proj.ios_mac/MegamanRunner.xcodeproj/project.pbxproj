@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132083F6A2E81B89B552EA74 /* play_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1320803C3CE429B50C90CABF /* play_button_normal.png */; };
+		132084118BA6256AF0C15EC3 /* play_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 132085A5982D3B2CEC731A7B /* play_button_selected.png */; };
+		13208418254A4DD30099EC5E /* play_button_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 132085A5982D3B2CEC731A7B /* play_button_selected.png */; };
+		13208897D142F107AC9039D1 /* HomeViewFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 132081DC8C32D5171774369C /* HomeViewFactory.cpp */; };
+		13208B2841D3D7A50F074AA1 /* HomeViewFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 132081DC8C32D5171774369C /* HomeViewFactory.cpp */; };
+		13208CC7AC6D25495138B0A0 /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13208A9C2DCC19303931709F /* HomeScene.cpp */; };
+		13208D964BD2CD72C87F08C5 /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13208A9C2DCC19303931709F /* HomeScene.cpp */; };
+		13208E949DC073EF60E0121F /* play_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1320803C3CE429B50C90CABF /* play_button_normal.png */; };
 		1A88B2641FC3D9C9005C14AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A88B2631FC3D9C9005C14AE /* Images.xcassets */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
@@ -96,6 +104,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1320803C3CE429B50C90CABF /* play_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button_normal.png; sourceTree = "<group>"; };
+		132081DC8C32D5171774369C /* HomeViewFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeViewFactory.cpp; sourceTree = "<group>"; };
+		132085A5982D3B2CEC731A7B /* play_button_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button_selected.png; sourceTree = "<group>"; };
+		132086CE950E8B60E4774EBC /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
+		13208A669DC5CB658118BC6A /* HomeViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewFactory.h; sourceTree = "<group>"; };
+		13208A9C2DCC19303931709F /* HomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HomeScene.cpp; sourceTree = "<group>"; };
 		1A88B2631FC3D9C9005C14AE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
@@ -188,6 +202,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1320803742133F51BBB5850F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				13208A9C2DCC19303931709F /* HomeScene.cpp */,
+				132086CE950E8B60E4774EBC /* HomeScene.h */,
+				132085AD42BB8ED069D50F1A /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		132085AD42BB8ED069D50F1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				132081DC8C32D5171774369C /* HomeViewFactory.cpp */,
+				13208A669DC5CB658118BC6A /* HomeViewFactory.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13208E7603571241E960B235 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1320803742133F51BBB5850F /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +314,8 @@
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
+				132085A5982D3B2CEC731A7B /* play_button_selected.png */,
+				1320803C3CE429B50C90CABF /* play_button_normal.png */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -285,6 +328,7 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				13208E7603571241E960B235 /* Features */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -420,6 +464,8 @@
 				1AF87B891F6F781D007BE51C /* LaunchScreenBackground.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */,
+				13208418254A4DD30099EC5E /* play_button_selected.png in Resources */,
+				13208E949DC073EF60E0121F /* play_button_normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +479,8 @@
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				132084118BA6256AF0C15EC3 /* play_button_selected.png in Resources */,
+				132083F6A2E81B89B552EA74 /* play_button_normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +496,8 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				13208CC7AC6D25495138B0A0 /* HomeScene.cpp in Sources */,
+				13208897D142F107AC9039D1 /* HomeViewFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +508,8 @@
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				13208B2841D3D7A50F074AA1 /* HomeViewFactory.cpp in Sources */,
+				13208D964BD2CD72C87F08C5 /* HomeScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
