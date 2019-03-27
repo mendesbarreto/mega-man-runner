@@ -6,6 +6,7 @@
 #include "HomeViewFactory.h"
 #include "cocos2d.h"
 #include "scene.h"
+#include "gameScene.h"
 
 bool HomeScene::init() {
      if ( !Scene::init() ) { return false; }
@@ -29,7 +30,9 @@ bool HomeScene::init() {
 }
 
 void HomeScene::onPlayButtonTapped(cocos2d::Ref *sender) {
-     Director::getInstance()->end();
+     auto director = Director::getInstance();
+     auto gameScene = GameScene::createScene();
+     director->pushScene(gameScene);
 }
 
 cocos2d::Scene *HomeScene::createScene() {

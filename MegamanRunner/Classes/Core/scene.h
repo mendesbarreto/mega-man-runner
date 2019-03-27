@@ -7,19 +7,20 @@
 
 #include "cocos2d.h"
 
-class Scene: public cocos2d::Scene {
-private:
-    cocos2d::Size m_visibleWindow;
-    cocos2d::Vec2 m_visibleOrigin;
+namespace core {
+    class Scene: public cocos2d::Scene {
+    private:
+        cocos2d::Size m_visibleWindow;
+        cocos2d::Vec2 m_visibleOrigin;
 
-public:
-    static cocos2d::Scene* createScene();
-    virtual bool init();
-    CREATE_FUNC(Scene);
+    public:
+        static cocos2d::Scene* createScene();
+        virtual bool init();
+        CREATE_FUNC(Scene);
 
-    cocos2d::Size getWindow();
-    cocos2d::Vec2 getOrigin();
-};
+        cocos2d::Size getWindow();
+        cocos2d::Vec2 getOrigin();
+    };
 
-
+}
 #endif //MEGAMANRUNNER_SCENE_H

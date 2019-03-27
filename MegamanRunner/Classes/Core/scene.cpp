@@ -4,22 +4,22 @@
 
 #include "scene.h"
 #include "cocos2d.h"
-cocos2d::Scene* Scene::createScene()
+cocos2d::Scene* core::Scene::createScene()
 {
-    return Scene::create();
+    return core::Scene::create();
 }
 
-bool Scene::init() {
+bool core::Scene::init() {
     if ( !cocos2d::Scene::init() ) { return false; }
     m_visibleWindow = cocos2d::Director::getInstance()->getVisibleSize();
     m_visibleOrigin = cocos2d::Director::getInstance()->getVisibleOrigin();
     return true;
 }
 
-cocos2d::Size Scene::getWindow() {
+cocos2d::Size core::Scene::getWindow() {
     return m_visibleWindow;
 }
 
-cocos2d::Vec2 Scene::getOrigin() {
+cocos2d::Vec2 core::Scene::getOrigin() {
     return m_visibleOrigin;
 }

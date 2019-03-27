@@ -8,7 +8,7 @@
 #include "cocos2d.h"
 #include "scene.h"
 
-class HomeScene: Scene {
+class HomeScene: core::Scene {
 public:
     static cocos2d::Scene* createScene();
     virtual bool init();
