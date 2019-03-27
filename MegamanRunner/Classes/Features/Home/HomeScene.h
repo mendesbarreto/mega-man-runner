@@ -6,16 +6,11 @@
 #define MEGAMANRUNNER_HOMESCENE_H
 
 #include "cocos2d.h"
+#include "scene.h"
 
-USING_NS_CC;
-
-class HomeScene: cocos2d::Scene {
+class HomeScene: Scene {
 public:
-    Size m_visibleWindow;
-    Vec2 m_visibleOrigin;
-
-public:
-    static Scene* createScene();
+    static cocos2d::Scene* createScene();
     virtual bool init();
     void onPlayButtonTapped(cocos2d::Ref* sender);
     CREATE_FUNC(HomeScene);
