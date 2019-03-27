@@ -4,23 +4,25 @@
 
 #include "HomeScene.h"
 #include "HomeViewFactory.h"
-USING_NS_CC;
+#include "cocos2d.h"
+#include "scene.h"
+#include "gameScene.h"
 
 bool HomeScene::init() {
      if ( !Scene::init() ) { return false; }
-     m_visibleWindow = Director::getInstance()->getVisibleSize();
-     m_visibleOrigin = Director::getInstance()->getVisibleOrigin();
 
      auto playButton = HomeViewFactory::createPlayGameButton(CC_CALLBACK_1(HomeScene::onPlayButtonTapped, this));
      auto playButtonSize = playButton->getContentSize();
+     auto visibleOrigin = this->getOrigin();
+     auto visibleWindow = this->getWindow();
 
-     auto x = m_visibleOrigin.x + ( m_visibleWindow.width * 0.5 );
-     auto y = m_visibleOrigin.y + ( m_visibleWindow.height * 0.5 );
+     auto x = visibleOrigin.x + ( visibleWindow.width * 0.5 );
+     auto y = visibleOrigin.y + ( visibleWindow.height * 0.5 );
 
      playButton->setPosition(Vec2(x,y));
 
-     auto menu = Menu::create(playButton, NULL);
-     menu->setPosition(Vec2::ZERO);
+     auto menu = cocos2d::Menu::create(playButton, NULL);
+     menu->setPosition(cocos2d::Vec2::ZERO);
 
      this->addChild(menu, 1);
 
@@ -28,9 +30,11 @@ bool HomeScene::init() {
 }
 
 void HomeScene::onPlayButtonTapped(cocos2d::Ref *sender) {
-     Director::getInstance()->end();
+     auto director = Director::getInstance();
+     auto gameScene = GameScene::createScene();
+     director->pushScene(gameScene);
 }
 
-Scene *HomeScene::createScene() {
+cocos2d::Scene *HomeScene::createScene() {
      return HomeScene::create();
 }
